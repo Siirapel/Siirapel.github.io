@@ -9,13 +9,13 @@
       font-family: 'Helvetica Neue', Arial, sans-serif;
       line-height: 1.6;
       color: #333;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
     }
     
     header {
-      padding: 30px 0;
+      padding: 30px 20px;
       border-bottom: 1px solid #eee;
       margin-bottom: 40px;
       display: flex;
@@ -40,6 +40,7 @@
       align-items: center;
       margin-bottom: 50px;
       flex-wrap: wrap;
+      padding: 0 20px;
     }
     
     .hero-text {
@@ -85,7 +86,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      margin: 60px 0;
+      margin: 60px 20px;
     }
     
     .feature {
@@ -106,8 +107,7 @@
     
     .how-it-works {
       background-color: #f9f9f9;
-      padding: 50px;
-      border-radius: 4px;
+      padding: 50px 20px;
       margin: 60px 0;
     }
     
@@ -120,6 +120,8 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     
     .step {
@@ -144,6 +146,7 @@
     
     section {
       margin-bottom: 60px;
+      padding: 0 20px;
     }
     
     /* Recipe Finder and Results */
@@ -210,6 +213,9 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       margin-top: 30px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .videos-grid img {
@@ -228,7 +234,7 @@
     
     footer {
       text-align: center;
-      padding: 30px 0;
+      padding: 30px 20px;
       border-top: 1px solid #eee;
       margin-top: 60px;
       color: #666;
@@ -293,7 +299,7 @@
   
   <section id="recipe-finder">
     <h2>Find Recipes Now</h2>
-    <p>Enter the ingredients you have on hand (separated by commas). We’ll suggest recipes that use one or more of your ingredients:</p>
+    <p>Enter the ingredients you have on hand (separated by commas). We'll suggest recipes that use one or more of your ingredients:</p>
     <form id="recipe-form">
       <textarea id="ingredient-input" placeholder="e.g. chicken, rice, tomatoes, onion, garlic"></textarea>
       <button type="submit">Generate Recipes</button>
@@ -337,18 +343,6 @@
     // Sample recipe data with additional new recipes
     const recipes = [
       {
-        title: "Grilled Chicken Quinoa Bowl",
-        ingredients: ["chicken", "quinoa", "avocado", "mushroom", "spinach", "tomato"],
-        instructions: [
-          "Grill chicken breasts until cooked through.",
-          "Cook quinoa according to package instructions.",
-          "Slice avocado, mushrooms, and tomatoes.",
-          "Sauté mushrooms in olive oil until tender.",
-          "Assemble the bowl with quinoa, chicken, spinach, and veggies.",
-          "Drizzle with olive oil or your favorite dressing."
-        ]
-      },
-      {
         title: "Tofu Stir Fry",
         ingredients: ["tofu", "bell pepper", "garlic", "soy sauce", "ginger"],
         instructions: [
@@ -382,7 +376,7 @@
       },
       {
         title: "Burger",
-        ingredients: ["beef patty", "bun", "lettuce", "tomato", "cheese", "onion", "pickles"],
+        ingredients: ["beef patty", "bun", "lettuce", "tomato", "cheese", "onion","bread", "pickles"],
         instructions: [
           "Grill a beef patty to your desired doneness.",
           "Toast the bun lightly.",
@@ -390,6 +384,48 @@
           "Assemble your burger and serve with condiments."
         ]
       },
+      {
+        title: "Simple Sandwich",
+        ingredients: ["bread slices", "butter", "lettuce", "tomato", "cucumber", "mayonnaise", "cheese slices"],
+        instructions: [
+          "Spread butter evenly on one side of each bread slice.",
+          "Layer lettuce, tomato slices, cucumber slices, and cheese on one bread slice.",
+          "Add a dollop of mayonnaise on top of the layered ingredients.",
+          "Cover the sandwich with the second bread slice, butter side down.",
+          "Cut into halves or quarters if desired, and serve."
+        ]
+      },
+      {
+        title: "Vegetable Stir-Fry",
+        ingredients: ["vegetables (e.g., carrots, broccoli, bell peppers)", "oil", "soy sauce", "garlic", "onion"],
+        instructions: [
+          "Heat oil in a pan over medium heat.",
+          "Add chopped garlic and onion, sauté until fragrant.",
+          "Add your choice of chopped vegetables and stir-fry until tender but still crisp.",
+          "Drizzle soy sauce on top, toss to coat evenly, and serve hot!"
+        ]
+      },
+      {
+        title: "Chicken Curry",
+        ingredients: ["chicken", "curry powder", "coconut milk", "onion", "garlic", "ginger"],
+        instructions: [
+          "Sauté chopped onions, garlic, and ginger until fragrant.",
+          "Add chicken pieces and cook until browned.",
+          "Stir in curry powder and coconut milk; simmer until chicken is cooked through.",
+          "Serve with rice or naan."
+        ]
+      },
+      {
+        title: "Omelette",
+        ingredients: ["eggs", "milk", "cheese", "bell pepper", "onion", "salt", "pepper"],
+        instructions: [
+          "Whisk eggs with a splash of milk, salt, and pepper.",
+          "Sauté chopped bell pepper and onion in a pan.",
+          "Pour the egg mixture over the vegetables; cook until set.",
+          "Sprinkle cheese on top, fold, and serve."
+        ]
+      },
+      
       {
         title: "Vegetable Soup",
         ingredients: ["broth", "carrot", "celery", "onion", "garlic", "tomato", "potato", "salt", "pepper"],
